@@ -23,4 +23,4 @@ const gameLogic = (intro, startRound) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default gameLogic();
+export default gameLogic;
