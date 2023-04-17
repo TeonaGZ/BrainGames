@@ -17,7 +17,7 @@ const gameLogic = (intro, startRound) => {
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.
       Let's try again, ${userName}!`);
-      i = -1;
+      return;
     }
   }
   console.log(`Congratulations, ${userName}!`);

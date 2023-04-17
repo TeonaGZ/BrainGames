@@ -1,6 +1,6 @@
 import gameLogic from '../index.js';
+import getRandomInt from '../helper-functions.js';
 
-const getRandomInt = (max) => Math.floor(Math.random() * max);
 const isEven = (num) => (num % 2 === 0);
 
 const intro = 'Answer "yes" if the number is even, otherwise answer "no".';
