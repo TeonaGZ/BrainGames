@@ -4,10 +4,10 @@ import getRandomInt from '../helper-functions.js';
 const intro = 'What is the result of the expression?';
 
 const startRound = () => {
-  const value1 = getRandomInt(101);
-  const value2 = getRandomInt(101);
+  const value1 = getRandomInt();
+  const value2 = getRandomInt();
 
-  const operatorNumber = getRandomInt(3);
+  const operatorNumber = getRandomInt(0, 2);
   const operators = ['+', '-', '*'];
   const operator = operators[operatorNumber];
 

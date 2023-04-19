@@ -11,8 +11,8 @@ const getGCD = (num1, num2) => {
 };
 
 const startRound = () => {
-  const value1 = getRandomInt(101);
-  const value2 = getRandomInt(101);
+  const value1 = getRandomInt();
+  const value2 = getRandomInt();
 
   const questionValue = `${value1} ${value2}`;
   const rightAnswer = String(getGCD(value1, value2));

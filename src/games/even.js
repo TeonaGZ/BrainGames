@@ -6,7 +6,7 @@ const isEven = (num) => (num % 2 === 0);
 const intro = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const startRound = () => {
-  const value = getRandomInt(101);
+  const value = getRandomInt();
   const questionValue = `${value}`;
   const rightAnswer = isEven(value) ? 'yes' : 'no';
   return [questionValue, rightAnswer];
