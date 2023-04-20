@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/e5a3d1b90aad5c304c3b/maintainability)](https://codeclimate.com/github/TeonaGZ/frontend-project-44/maintainability)
 
 
-# "Brain games" 
+# Brain games
 
 It is a set of five console games for pumping the brain. Each game asks questions that need to be answered correctly. After three correct answers, the game is considered to be completed. Wrong answers end the game and offer to play it again. 
 
