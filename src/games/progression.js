@@ -24,7 +24,7 @@ const startRound = () => {
   const progressionLength = getRandomInt(5, 10);
 
   const [questionProgression, missingValue] = getProgression(value, stepValue, progressionLength);
-  const questionValue = `${questionProgression}`;
+  const questionValue = questionProgression.join(' ');
   const rightAnswer = `${missingValue}`;
   return [questionValue, rightAnswer];
 };
