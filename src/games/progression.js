@@ -25,7 +25,8 @@ const getRoundData = () => {
   const missingValue = progression[missingValuePlace];
   progression[missingValuePlace] = '..';
 
-  const questionValue = `${progression}`;
+  let questionValue = progression.join(' ');
+  questionValue = `${questionValue}`;
   const rightAnswer = `${missingValue}`;
   return [questionValue, rightAnswer];
 };
