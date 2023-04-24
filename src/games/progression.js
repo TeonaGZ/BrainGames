@@ -1,34 +1,35 @@
-import gameLogic from '../index.js';
+import runGame from '../index.js';
 import getRandomInt from '../helper-functions.js';
 
 const intro = 'What number is missing in the progression?';
 
 const getProgression = (firstValue, step, arrLength) => {
   const progression = [firstValue];
-  const missingValuePlace = getRandomInt(0, arrLength);
 
-  let arrValue = firstValue;
   for (let i = 0; i < arrLength; i += 1) {
-    const nextValue = arrValue + step;
-    arrValue = nextValue;
+    const nextValue = progression[progression.length - 1] + step;
     progression.push(nextValue);
   }
-  const missingValue = progression[missingValuePlace];
-  progression[missingValuePlace] = '..';
-  return [progression, missingValue];
+
+  return progression;
 };
 
-const startRound = () => {
+const getRoundData = () => {
   const value = getRandomInt(1, 20);
   const stepValue = getRandomInt(1, 5);
   const progressionLength = getRandomInt(5, 10);
+  const missingValuePlace = getRandomInt(0, progressionLength);
 
-  const [questionProgression, missingValue] = getProgression(value, stepValue, progressionLength);
-  const questionValue = questionProgression.join(' ');
+  const progression = getProgression(value, stepValue, progressionLength);
+
+  const missingValue = progression[missingValuePlace];
+  progression[missingValuePlace] = '..';
+
+  const questionValue = `${progression}`;
   const rightAnswer = `${missingValue}`;
   return [questionValue, rightAnswer];
 };
 
-const playProgressionGame = () => gameLogic(intro, startRound);
+const playProgressionGame = () => runGame(intro, getRoundData);
 
 export default playProgressionGame;

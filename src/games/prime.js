@@ -1,4 +1,4 @@
-import gameLogic from '../index.js';
+import runGame from '../index.js';
 import getRandomInt from '../helper-functions.js';
 
 const intro = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -12,13 +12,13 @@ const isPrime = (num) => {
   return true;
 };
 
-const startRound = () => {
+const getRoundData = () => {
   const value = getRandomInt();
   const questionValue = `${value}`;
   const rightAnswer = isPrime(value) ? 'yes' : 'no';
   return [questionValue, rightAnswer];
 };
 
-const playPrimeGame = () => gameLogic(intro, startRound);
+const playPrimeGame = () => runGame(intro, getRoundData);
 
 export default playPrimeGame;
